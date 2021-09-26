@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/drawable/button_ganelevels.xml" value="0.290625" />
+        <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/drawable/button_stroke_black95_press_white.xml" value="0.290625" />
+        <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/drawable/style_btn_black60.xml" value="0.290625" />
+        <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/drawable/style_btn_black95.xml" value="0.290625" />
+        <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/drawable/style_btn_stoke_black95.xml" value="0.290625" />
+        <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/drawable/style_btn_stoke_black95_press_white.xml" value="0.290625" />
+        <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/layout/gamelevel.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
