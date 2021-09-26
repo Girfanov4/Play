@@ -5,13 +5,16 @@
       <map>
         <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/drawable/button_ganelevels.xml" value="0.290625" />
         <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/drawable/button_stroke_black95_press_white.xml" value="0.290625" />
+        <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/drawable/button_stroke_white_press_blue.xml" value="0.23984375" />
         <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/drawable/style_btn_black60.xml" value="0.290625" />
         <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/drawable/style_btn_black95.xml" value="0.290625" />
         <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/drawable/style_btn_stoke_black95.xml" value="0.290625" />
         <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/drawable/style_btn_stoke_black95_press_white.xml" value="0.290625" />
+        <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/drawable/style_btn_white.xml" value="0.23984375" />
+        <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/drawable/style_btn_white_blue_press.xml" value="0.23984375" />
         <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/layout/gamelevel.xml" value="0.1" />
-        <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/layout/universal.xml" value="0.264" />
+        <entry key="..\:/Users/1/AndroidStudioProjects/Play/app/src/main/res/layout/universal.xml" value="0.40233236151603496" />
       </map>
     </option>
   </component>
