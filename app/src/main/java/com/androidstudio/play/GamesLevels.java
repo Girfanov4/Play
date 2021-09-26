@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,6 +24,20 @@ public class GamesLevels extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     Intent intent = new Intent(GamesLevels.this, MainActivity.class);
+                    startActivity(intent); finish();
+                }catch (Exception e){
+
+                }
+            }
+        });
+
+
+        TextView textView1 =(TextView)findViewById(R.id.textView1);
+        textView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent = new Intent(GamesLevels.this, Level1.class);
                     startActivity(intent); finish();
                 }catch (Exception e){
 
