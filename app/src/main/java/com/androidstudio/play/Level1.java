@@ -46,14 +46,37 @@ public class Level1 extends AppCompatActivity {
                 }
                 dialog.dismiss();
             }
-            });
+        });
         Button btncontinue = (Button) dialog.findViewById(R.id.btncontinue);
         btncontinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            dialog.dismiss();
+                dialog.dismiss();
             }
         });
         dialog.show();
+        Button btn_back = (Button) findViewById(R.id.button_back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent = new Intent(Level1.this, GamesLevels.class);
+                    startActivity(intent);
+                    finish();
+                } catch (Exception e) {
+
+                }
+            }
+            });
+        }
+        @Override
+    public void onBackPressed(){
+            try {
+                Intent intent = new Intent(Level1.this, GamesLevels.class);
+                startActivity(intent);
+                finish();
+            } catch (Exception e) {
+
+            }
         }
     }
