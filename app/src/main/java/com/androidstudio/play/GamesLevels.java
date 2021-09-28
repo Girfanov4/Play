@@ -18,7 +18,7 @@ public class GamesLevels extends AppCompatActivity {
         setContentView(R.layout.gamelevel);
         Window window = getWindow();
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        Button button_back = (Button) findViewById(R.id.button_back);
+        Button button_back = (Button) findViewById(R.id.button_back_levels);
         button_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

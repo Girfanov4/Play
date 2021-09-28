@@ -25,11 +25,11 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button_back"
+                    android:id="@+id/button_back_levels"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:backgroundTint="@drawable/button_stroke_black95_press_white"
+                    android:onClick="onClick"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
                     android:text="@string/back"
@@ -60,7 +60,7 @@
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_marginRight="10dp"
-                            android:backgroundTint="@drawable/button_ganelevels"
+                            android:background="@drawable/button_ganelevels"
                             android:gravity="center"
                             android:text="1"
                             android:textColor="@color/white"
