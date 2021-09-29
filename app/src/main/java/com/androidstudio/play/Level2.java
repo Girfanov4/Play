@@ -47,6 +47,12 @@ public class Level2 extends AppCompatActivity {
         dialog.setContentView(R.layout.previewdialog);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.setCancelable(false);
+        // Установить картинку в диалог
+        ImageView previewimg = (ImageView)dialog.findViewById(R.id.previewimg);
+        previewimg.setImageResource(R.drawable.previewimgtwo);
+        //Устанавливаем описание задания
+        TextView textdescriptoin = (TextView)dialog.findViewById(R.id.textdescription);
+        textdescriptoin.setText(R.string.leveltwo);
         TextView btnclose = (TextView) dialog.findViewById(R.id.btnclose);
         btnclose.setOnClickListener(new View.OnClickListener() {
             @Override
