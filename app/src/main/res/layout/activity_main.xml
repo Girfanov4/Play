@@ -42,7 +42,7 @@
             android:layout_height="60dp"
             android:layout_weight="1"
 
-            android:backgroundTint="@drawable/button_stroke_black95_press_white"
+            android:background="@drawable/button_stroke_black95_press_white"
             android:minHeight="48dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"

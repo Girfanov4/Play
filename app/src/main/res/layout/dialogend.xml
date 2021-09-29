@@ -20,10 +20,12 @@
         <TextView
             android:id="@+id/btnclose"
             android:layout_width="30dp"
+            android:textColor="@color/black"
             android:layout_height="30dp"
             android:layout_gravity="end"
             android:background="@drawable/button_stroke_black95_press_white"
             android:gravity="center"
+
             android:text="X"
             android:textStyle="bold" />
 
@@ -48,6 +50,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/button_stroke_black95_press_white"
             android:paddingLeft="10dp"
+
             android:paddingRight="10dp"
             android:text="@string/textContinue"
             android:textAllCaps="true"

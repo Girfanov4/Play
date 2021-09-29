@@ -2,6 +2,7 @@ package com.androidstudio.play;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -34,7 +35,7 @@ public class Level2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.universal);
         TextView text_levels = findViewById(R.id.text_levels);
-        text_levels.setText(R.string.level1);
+        text_levels.setText(R.string.level2);
         final ImageView img_left = (ImageView) findViewById(R.id.img_left);
         img_left.setClipToOutline(true);
         final ImageView img_right = (ImageView) findViewById(R.id.img_right);
@@ -200,6 +201,15 @@ public class Level2 extends AppCompatActivity {
                         }
                     }
                     if (count == 20) {
+                        SharedPreferences save = getSharedPreferences("Save",MODE_PRIVATE);
+                        final int level = save.getInt("Level",1);
+                        if (level>2){
+
+                        }else {
+                            SharedPreferences.Editor editor = save.edit();
+                            editor.putInt("Level",3);
+                            editor.commit();
+                        }
                         dialogEnd.show();
                     } else {
                         numLeft = random.nextInt(10);
@@ -262,6 +272,15 @@ public class Level2 extends AppCompatActivity {
                         }
                     }
                     if (count == 20) {
+                        SharedPreferences save = getSharedPreferences("Save",MODE_PRIVATE);
+                        final int level = save.getInt("Level",1);
+                        if (level>2){
+
+                        }else {
+                            SharedPreferences.Editor editor = save.edit();
+                            editor.putInt("Level",3);
+                            editor.commit();
+                        }
                         dialogEnd.show();
                     } else {
                         numLeft = random.nextInt(10);
