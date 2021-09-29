@@ -58,6 +58,7 @@ public class Level1 extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 } catch (Exception e) {
+                    //
                 }
                 dialog.dismiss();
             }
@@ -66,6 +67,7 @@ public class Level1 extends AppCompatActivity {
         btncontinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 dialog.dismiss();
             }
         });
@@ -77,7 +79,7 @@ public class Level1 extends AppCompatActivity {
         dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
                 WindowManager.LayoutParams.MATCH_PARENT);
         dialogEnd.setCancelable(false);
-        TextView btnclose2 = (TextView) dialog.findViewById(R.id.btnclose);
+        TextView btnclose2 = (TextView) dialogEnd.findViewById(R.id.btnclose);
         btnclose2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,7 +92,7 @@ public class Level1 extends AppCompatActivity {
                 dialogEnd.dismiss();
             }
         });
-        Button btncontinue2 = (Button) dialog.findViewById(R.id.btncontinue);
+        Button btncontinue2 = (Button) dialogEnd.findViewById(R.id.btncontinue);
         btncontinue2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -113,7 +115,7 @@ public class Level1 extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 } catch (Exception e) {
-
+//
                 }
             }
         });
@@ -282,7 +284,7 @@ public class Level1 extends AppCompatActivity {
             startActivity(intent);
             finish();
         } catch (Exception e) {
-
+//
         }
     }
 }
