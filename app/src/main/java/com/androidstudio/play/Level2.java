@@ -107,20 +107,20 @@ public class Level2 extends AppCompatActivity {
                 R.id.point16,
                 R.id.point17,
                 R.id.point18,
-                R.id.point10,
+                R.id.point19,
                 R.id.point20,
 
         };
         final Animation a = AnimationUtils.loadAnimation(Level2.this, R.anim.alpha);
         numLeft = random.nextInt(10);
-        img_left.setImageResource(array.images1[numLeft]);
-        text_left.setText(array.texts1[numLeft]);
+        img_left.setImageResource(array.images2[numLeft]);
+        text_left.setText(array.texts2[numLeft]);
         numRight = random.nextInt(10);
         while (numLeft == numRight) {
             numRight = random.nextInt(10);
         }
-        img_right.setImageResource(array.images1[numRight]);
-        text_right.setText(array.texts1[numRight]);
+        img_right.setImageResource(array.images2[numRight]);
+        text_right.setText(array.texts2[numRight]);
         img_left.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -165,16 +165,16 @@ public class Level2 extends AppCompatActivity {
 
                     }else{
                         numLeft = random.nextInt(10);
-                        img_left.setImageResource(array.images1[numLeft]);
+                        img_left.setImageResource(array.images2[numLeft]);
                         img_left.startAnimation(a);
-                        text_left.setText(array.texts1[numLeft]);
+                        text_left.setText(array.texts2[numLeft]);
                         numRight = random.nextInt(10);
                         while (numLeft == numRight) {
                             numRight = random.nextInt(10);
                         }
-                        img_right.setImageResource(array.images1[numRight]);
+                        img_right.setImageResource(array.images2[numRight]);
                         img_right.startAnimation(a);
-                        text_right.setText(array.texts1[numRight]);
+                        text_right.setText(array.texts2[numRight]);
                         img_right.setEnabled(true);
                     }
                 }
@@ -229,16 +229,16 @@ public class Level2 extends AppCompatActivity {
 
                     }else{
                         numLeft = random.nextInt(10);
-                        img_left.setImageResource(array.images1[numLeft]);
+                        img_left.setImageResource(array.images2[numLeft]);
                         img_left.startAnimation(a);
-                        text_left.setText(array.texts1[numLeft]);
+                        text_left.setText(array.texts2[numLeft]);
                         numRight = random.nextInt(10);
                         while (numLeft == numRight) {
                             numRight = random.nextInt(10);
                         }
-                        img_right.setImageResource(array.images1[numRight]);
+                        img_right.setImageResource(array.images2[numRight]);
                         img_right.startAnimation(a);
-                        text_right.setText(array.texts1[numRight]);
+                        text_right.setText(array.texts2[numRight]);
                         img_left.setEnabled(true);
                     }
                 }
