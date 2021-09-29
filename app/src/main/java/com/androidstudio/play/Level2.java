@@ -22,6 +22,7 @@ import java.util.Random;
 public class Level2 extends AppCompatActivity {
 
     Dialog dialog;
+    Dialog dialogEnd;
     public int numLeft;
     public int numRight;
     Array array = new Array();
@@ -48,11 +49,12 @@ public class Level2 extends AppCompatActivity {
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.setCancelable(false);
         // Установить картинку в диалог
-        ImageView previewimg = (ImageView)dialog.findViewById(R.id.previewimg);
+        ImageView previewimg = (ImageView) dialog.findViewById(R.id.previewimg);
         previewimg.setImageResource(R.drawable.previewimgtwo);
         //Устанавливаем описание задания
-        TextView textdescriptoin = (TextView)dialog.findViewById(R.id.textdescription);
+        TextView textdescriptoin = (TextView) dialog.findViewById(R.id.textdescription);
         textdescriptoin.setText(R.string.leveltwo);
+
         TextView btnclose = (TextView) dialog.findViewById(R.id.btnclose);
         btnclose.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,6 +76,42 @@ public class Level2 extends AppCompatActivity {
             }
         });
         dialog.show();
+        dialogEnd = new Dialog(this);
+        dialogEnd.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialogEnd.setContentView(R.layout.dialogend);
+        dialogEnd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialogEnd.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.MATCH_PARENT);
+        dialogEnd.setCancelable(false);
+        TextView textdescriptionEnd = (TextView) dialogEnd.findViewById(R.id.textdescriptionEnd);
+        textdescriptionEnd.setText(R.string.levelEnd);
+        TextView btnclose2 = (TextView) dialogEnd.findViewById(R.id.btnclose);
+        btnclose2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent = new Intent(Level2.this, GamesLevels.class);
+                    startActivity(intent);
+                    finish();
+                } catch (Exception e) {
+                }
+                dialogEnd.dismiss();
+            }
+        });
+        Button btncontinue2 = (Button) dialogEnd.findViewById(R.id.btncontinue);
+        btncontinue2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Intent intent = new Intent(Level2.this, Level2.class);
+                    startActivity(intent);
+                    finish();
+                } catch (Exception e) {
+
+                }
+                dialogEnd.dismiss();
+            }
+        });
         Button btn_back = (Button) findViewById(R.id.button_back_levels);
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,38 +170,38 @@ public class Level2 extends AppCompatActivity {
                         img_left.setImageResource(R.drawable.img_false);
                     }
                 } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    if (numLeft>numRight){
-                        if(count<20){
-                            count =count+1;
+                    if (numLeft > numRight) {
+                        if (count < 20) {
+                            count = count + 1;
                         }
-                        for (int i =0; i<20; i++){
+                        for (int i = 0; i < 20; i++) {
                             TextView tv = findViewById(progress[i]);
                             tv.setBackgroundResource(R.drawable.style_point);
                         }
-                         for(int i=0;i<count;i++){
-                             TextView tv = findViewById(progress[i]);
-                             tv.setBackgroundResource(R.drawable.style_point_green);
-                         }
-                    }else {
-                        if (count>0){
-                            if(count==1){
-                                count =0;
-                            }else {
-                                    count = count-2;
+                        for (int i = 0; i < count; i++) {
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_point_green);
+                        }
+                    } else {
+                        if (count > 0) {
+                            if (count == 1) {
+                                count = 0;
+                            } else {
+                                count = count - 2;
                             }
                         }
-                        for (int i =0; i<19; i++){
+                        for (int i = 0; i < 19; i++) {
                             TextView tv = findViewById(progress[i]);
                             tv.setBackgroundResource(R.drawable.style_point);
                         }
-                        for(int i=0;i<count;i++){
+                        for (int i = 0; i < count; i++) {
                             TextView tv = findViewById(progress[i]);
                             tv.setBackgroundResource(R.drawable.style_point_green);
                         }
                     }
-                    if (count ==20){
-
-                    }else{
+                    if (count == 20) {
+                        dialogEnd.show();
+                    } else {
                         numLeft = random.nextInt(10);
                         img_left.setImageResource(array.images2[numLeft]);
                         img_left.startAnimation(a);
@@ -183,8 +221,6 @@ public class Level2 extends AppCompatActivity {
         });
 
 
-
-
         img_right.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -196,38 +232,38 @@ public class Level2 extends AppCompatActivity {
                         img_right.setImageResource(R.drawable.img_false);
                     }
                 } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    if (numLeft<numRight){
-                        if(count<20){
-                            count =count+1;
+                    if (numLeft < numRight) {
+                        if (count < 20) {
+                            count = count + 1;
                         }
-                        for (int i =0; i<20; i++){
+                        for (int i = 0; i < 20; i++) {
                             TextView tv = findViewById(progress[i]);
                             tv.setBackgroundResource(R.drawable.style_point);
                         }
-                        for(int i=0;i<count;i++){
+                        for (int i = 0; i < count; i++) {
                             TextView tv = findViewById(progress[i]);
                             tv.setBackgroundResource(R.drawable.style_point_green);
                         }
-                    }else {
-                        if (count>0){
-                            if(count==1){
-                                count =0;
-                            }else {
-                                count = count-2;
+                    } else {
+                        if (count > 0) {
+                            if (count == 1) {
+                                count = 0;
+                            } else {
+                                count = count - 2;
                             }
                         }
-                        for (int i =0; i<19; i++){
+                        for (int i = 0; i < 19; i++) {
                             TextView tv = findViewById(progress[i]);
                             tv.setBackgroundResource(R.drawable.style_point);
                         }
-                        for(int i=0;i<count;i++){
+                        for (int i = 0; i < count; i++) {
                             TextView tv = findViewById(progress[i]);
                             tv.setBackgroundResource(R.drawable.style_point_green);
                         }
                     }
-                    if (count ==20){
-
-                    }else{
+                    if (count == 20) {
+                        dialogEnd.show();
+                    } else {
                         numLeft = random.nextInt(10);
                         img_left.setImageResource(array.images2[numLeft]);
                         img_left.startAnimation(a);
